@@ -1,4 +1,0 @@
- index:
-     path: companies/
-     controller: App\Controller\CompaniesController::index
-  config/routes.yaml
