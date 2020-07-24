@@ -1,0 +1,8 @@
+sylius_resource:
+    resources:
+        app.companies:
+            classes:
+                model: App\Entity\Companies
+        app.contact:
+            classes:
+                model: App\Entity\Contact

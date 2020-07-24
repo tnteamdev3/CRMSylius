@@ -17,9 +17,21 @@ final class AdminMenuListener
 
         $Companies
             ->addChild('new-subitem')
-            ->setLabel('Companies index')
+            ->setLabel('Companies index', ['route' => 'app_admin_companies'])
             ->setLabelAttribute('icon', 'cubes')
+        ;
 
+    }
+     public function addItems(MenuBuilderEvent $event): void
+    {
+        $menu = $event->getMenu();
+
+        $menu
+            ->addChild('Contact')
+            ->setLabel('Contact')
+            ->addChild('new-subitem')
+            ->setLabel('Contact index')
+            ->setLabelAttribute('icon', 'phone')
         ;
     }
 }

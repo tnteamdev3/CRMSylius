@@ -1,0 +1,18 @@
+app_companies:
+    resource: |
+        alias: app.companies
+        section: admin
+        templates: SyliusAdminBundle:Crud
+        grid: app_admin_companies
+        redirect: index
+    type: sylius.resource
+    prefix: admin
+app_contact:
+    resource: |
+        alias: app.contact
+        section: admin
+        templates: SyliusAdminBundle:Crud
+        grid: app_admin_contact
+        redirect: index
+    type: sylius.resource
+    prefix: admin
