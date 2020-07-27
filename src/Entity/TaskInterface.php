@@ -30,6 +30,6 @@ interface TaskInterface extends ResourceInterface
     /**
 	* @param mixed $status
 	*/
-    public function setStatus(string $status);
+    public function setStatus(enum $status);
 
 }

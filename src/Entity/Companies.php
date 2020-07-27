@@ -71,7 +71,7 @@ class Companies implements CompaniesInterface
         }
       
      
-    public function setPhone(string $phone): self
+    public function setPhone(int $phone): self
         {
          $this->phone = $phone;
 
@@ -83,7 +83,7 @@ class Companies implements CompaniesInterface
            return $this->date_creation;
        }
      
-    public function setDateCreation(string $date_creation): self
+    public function setDateCreation(date $date_creation): self
         {
          $this->date_creation = $date_creation;
 

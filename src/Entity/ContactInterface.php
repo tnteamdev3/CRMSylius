@@ -39,6 +39,6 @@ interface ContactInterface extends ResourceInterface
     /**
 	* @param mixed $phone
 	*/
-    public function setPhone(string $phone);
+    public function setPhone(int $phone);
 
 }

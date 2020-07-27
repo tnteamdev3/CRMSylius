@@ -86,7 +86,7 @@ class Contact implements ContactInterface
         }
        
      
-    public function setPhone(string $phone): self
+    public function setPhone(int $phone): self
         {
          $this->phone = $phone;
 

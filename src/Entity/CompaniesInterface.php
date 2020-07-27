@@ -30,7 +30,7 @@ interface CompaniesInterface extends ResourceInterface
     /**
 	* @param mixed $phone
 	*/
-    public function setPhone(string $phone);
+    public function setPhone(int $phone);
 
  	/**
 	* @return mixed
@@ -39,5 +39,5 @@ interface CompaniesInterface extends ResourceInterface
     /**
 	* @param mixed $date_creation
 	*/
-    public function setDateCreation(string $date_creation);
+    public function setDateCreation(date $date_creation);
 }
