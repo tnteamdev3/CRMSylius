@@ -70,12 +70,12 @@ class Task implements TaskInterface
                                                
       }
       
-    public function getStatus(): ?enum
+    public function getStatus(): ?string
     {
         return $this->status;
     }
 
-    public function setStatus(enum $status): self
+    public function setStatus(string $status): self
     {
         $this->status = $status;
 

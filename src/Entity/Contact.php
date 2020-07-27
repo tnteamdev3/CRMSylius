@@ -17,11 +17,6 @@ class Contact implements ContactInterface
      */
     private $id;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -40,6 +35,11 @@ class Contact implements ContactInterface
      * @ORM\Column(type="int")
     */
     private $phone;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
 
     public function getfirstNameContact(): ?string
