@@ -18,7 +18,7 @@ class Task implements TaskInterface
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $name_task;
 
@@ -40,12 +40,12 @@ class Task implements TaskInterface
         return $this->id;
     }
 
-    public function getNameTask(): ?int
+    public function getNameTask(): ?string
     {
         return $this->name_task;
     }
 
-    public function setNameTask(int $name_task): self
+    public function setNameTask(string $name_task): self
     {
         $this->name_task = $name_task;
 

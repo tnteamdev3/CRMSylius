@@ -48,4 +48,26 @@ sylius_grid:
                     delete:
                         type: delete
 
+        app_admin_task:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: App\Entity\Task
+            fields:
+                name_task:
+                    type: string
+                description:
+                    type: string
+                status:
+                    type: enum
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+
                         

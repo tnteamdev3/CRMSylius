@@ -6,3 +6,6 @@ sylius_resource:
         app.contact:
             classes:
                 model: App\Entity\Contact
+        app.task:
+            classes:
+                model: App\Entity\Task

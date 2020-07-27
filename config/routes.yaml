@@ -16,3 +16,12 @@ app_contact:
         redirect: index
     type: sylius.resource
     prefix: admin
+app_task:
+    resource: |
+        alias: app.task
+        section: admin
+        templates: SyliusAdminBundle:Crud
+        grid: app_admin_task
+        redirect: index
+    type: sylius.resource
+    prefix: admin
