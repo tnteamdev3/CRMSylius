@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entity\Task;
 
 use Sylius\Component\Resource\Model\ResourceInterface;
 

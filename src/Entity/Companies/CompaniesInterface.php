@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entity\Companies;
 
 use Sylius\Component\Resource\Model\ResourceInterface;
 

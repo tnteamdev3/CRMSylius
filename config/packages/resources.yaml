@@ -2,10 +2,13 @@ sylius_resource:
     resources:
         app.companies:
             classes:
-                model: App\Entity\Companies
+                model: App\Entity\Companies\Companies
         app.contact:
             classes:
-                model: App\Entity\Contact
+                model: App\Entity\Contact\Contact
         app.task:
             classes:
-                model: App\Entity\Task
+                model: App\Entity\Task\Task
+        app.project:
+            classes:
+                model: App\Entity\Project\Project

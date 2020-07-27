@@ -8,8 +8,10 @@ parameters:
 doctrine:
     dbal:
         driver: 'pdo_mysql'
-        server_version: '5.7'
+        server_version: '10.4.10'
         charset: UTF8
+        mapping_types:
+            enum: string
 
         url: '%env(resolve:DATABASE_URL)%'
     orm:

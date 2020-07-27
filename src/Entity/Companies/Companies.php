@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entity\Companies;
 
 use App\Repository\CompaniesRepository;
 use Doctrine\ORM\Mapping as ORM;
@@ -27,7 +27,7 @@ class Companies implements CompaniesInterface
     private $email;
 
     /**
-     * @ORM\Column(type="int")
+     * @ORM\Column(type="integer")
     */
     private $phone;
 
@@ -36,7 +36,6 @@ class Companies implements CompaniesInterface
     */
     private $date_creation;
 
-    
     public function getId(): ?int
     {
         return $this->id;
@@ -65,30 +64,31 @@ class Companies implements CompaniesInterface
 
         return $this;
         }
-    public function getPhone(): ?int
+
+   public function getPhone(): ?int
         {
            return $this->phone;
         }
-      
+       
      
     public function setPhone(int $phone): self
         {
          $this->phone = $phone;
 
         return $this;
-        }
-
-    public function getDateCreation(): ?date
-    {
-           return $this->date_creation;
        }
-     
-    public function setDateCreation(date $date_creation): self
-        {
-         $this->date_creation = $date_creation;
 
-        return $this;
-        }
+
+    public function getDateCreation()
+    {
+        return $this->date_creation;
+    }
+
+    public function setDateCreation($date_creation): void
+    {
+        $this->date_creation = $date_creation;
+    }
+   
     public function __toString(){
                                 
         return $this->name_entreprise;

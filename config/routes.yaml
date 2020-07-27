@@ -25,3 +25,12 @@ app_task:
         redirect: index
     type: sylius.resource
     prefix: admin
+app_project:
+    resource: |
+        alias: app.project
+        section: admin
+        templates: SyliusAdminBundle:Crud
+        grid: app_admin_project
+        redirect: index
+    type: sylius.resource
+    prefix: admin

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entity\Contact;
 
 use App\Repository\ContactRepository;
 use Doctrine\ORM\Mapping as ORM;
@@ -32,7 +32,7 @@ class Contact implements ContactInterface
     */
     private $email;
     /**
-     * @ORM\Column(type="int")
+     * @ORM\Column(type="integer")
     */
     private $phone;
 
