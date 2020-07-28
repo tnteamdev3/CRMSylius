@@ -33,6 +33,12 @@ class Project implements ProjectInterface
     private $date_fin;
 
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Task\Task", mappedBy="projects")
+     * 
+     */
+    private $tasks;
+
 
     public function getId(): ?int
     {
@@ -76,6 +82,38 @@ class Project implements ProjectInterface
 
         return $this;
         }
+
+
+    /**
+     * @return Collection|Task[]
+     */
+    public function getTask(): Collection
+    {
+        return $this->tasks;
+    }
+
+    public function addTask(Task $tasks): self
+    {
+        if (!$this->tasks->contains($tasks)) {
+            $this->tasks[] = $tasks;
+            $tasks->setProject($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTask(Task $tasks): self
+    {
+        if ($this->tasks->contains($tasks)) {
+            $this->tasks->removeElement($tasks);
+            // set the owning side to null (unless already changed)
+            if ($tasks->getProject() === $this) {
+                $tasks->setProject(null);
+            }
+        }
+
+        return $this;
+    }
 
 
     public function __toString(){

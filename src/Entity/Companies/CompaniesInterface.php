@@ -40,4 +40,20 @@ interface CompaniesInterface extends ResourceInterface
 	* @param mixed $date_creation
 	*/
     public function setDateCreation(date $date_creation);
+
+        /**
+	* @return mixed
+	*/
+    public function getContact();
+
+      /**
+	* @param mixed $contact
+	*/
+    public function addContact(Contact $contact);
+
+      /**
+	* @param mixed $contact
+	*/
+    public function removeContact(Contact $contact);
+
 }

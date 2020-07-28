@@ -74,6 +74,7 @@ sylius_grid:
                 name_project:
                     type: string
 
+
             actions:
                 main:
                     create:

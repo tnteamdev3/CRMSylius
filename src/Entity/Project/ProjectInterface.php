@@ -32,4 +32,21 @@ interface ProjectInterface extends ResourceInterface
 	* @param mixed $date_fin
 	*/
     public function setDateFin(date $date_fin);
+ 
+    /**
+	* @return mixed
+	*/
+    public function getTask();
+
+      /**
+	* @param mixed $task
+	*/
+    public function addTask(Task $task);
+
+      /**
+	* @param mixed $task
+	*/
+    public function removeTask(Task $task);
+
+
 }

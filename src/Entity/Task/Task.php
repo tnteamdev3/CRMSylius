@@ -34,7 +34,13 @@ class Task implements TaskInterface
      */
     private $status;
 
-    
+      /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Project\Project", inversedBy="tasks")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $projects;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -78,6 +84,18 @@ class Task implements TaskInterface
     public function setStatus(string $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+        public function getProject(): ?Project
+    {
+        return $this->projects;
+    }
+
+    public function setProject(?Project $projects): self
+    {
+        $this->projects = $projects;
 
         return $this;
     }

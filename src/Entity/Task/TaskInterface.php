@@ -32,4 +32,13 @@ interface TaskInterface extends ResourceInterface
 	*/
     public function setStatus(string $status);
 
+	/**
+	* @return mixed
+	*/
+    public function getProject();
+    /**
+	* @param mixed $projects
+	*/
+    public function setProject(Project $projects);    
+
 }

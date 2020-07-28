@@ -36,6 +36,12 @@ class Contact implements ContactInterface
     */
     private $phone;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Companies\Companies", inversedBy="contacts")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $company;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -92,6 +98,19 @@ class Contact implements ContactInterface
 
         return $this;
        }
+
+    public function getCompany(): ?Companies
+    {
+        return $this->company;
+    }
+
+    public function setCompany(?Companies $company): self
+    {
+        $this->company = $company;
+
+        return $this;
+    }
+
 
     public function __toString(){
                                 

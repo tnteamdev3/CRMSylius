@@ -36,6 +36,13 @@ class Companies implements CompaniesInterface
     */
     private $date_creation;
 
+       /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Contact\Contact", mappedBy="company")
+     * 
+     */
+    private $contacts;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -89,6 +96,38 @@ class Companies implements CompaniesInterface
         $this->date_creation = $date_creation;
     }
    
+
+    /**
+     * @return Collection|Contact[]
+     */
+    public function getContact(): Collection
+    {
+        return $this->contacts;
+    }
+
+    public function addContact(Contact $contacts): self
+    {
+        if (!$this->contacts->contains($contacts)) {
+            $this->contacts[] = $contacts;
+            $contacts->setCompany($this);
+        }
+
+        return $this;
+    }
+
+    public function removeContact(Contact $contacts): self
+    {
+        if ($this->contacts->contains($contacts)) {
+            $this->contacts->removeElement($contacts);
+            // set the owning side to null (unless already changed)
+            if ($contacts->getCompany() === $this) {
+                $contacts->setCompany(null);
+            }
+        }
+
+        return $this;
+    }
+
     public function __toString(){
                                 
         return $this->name_entreprise;
